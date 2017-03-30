@@ -1,0 +1,57 @@
+{
+  "name": "tdd-dev-2in1-4-webui",
+  "main": "dist/DomFixtures.js",
+  "version": "0.0.1",
+  "description": "Allows you to easily mount dom elements onto fixtures",
+  "typings": "src/DomFixtures.d.ts",
+  "author": "Vishnu T Suresh <vishnutsuresh@live.com> (vishnutsuresh@live.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/VishnuTSuresh/dom-fixtures",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VishnuTSuresh/dom-fixtures.git"
+  },
+  "scripts": {
+    "test": "karma start",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.46",
+    "@types/node": "^7.0.12",
+    "@types/react": "^15.0.20",
+    "autoprefixer": "^6.7.7",
+    "awesome-typescript-loader": "^3.1.2",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
+    "dom-fixtures": "^0.0.2",
+    "file-loader": "^0.10.1",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-webpack": "^2.0.3",
+    "lorem-ipsum": "^1.0.3",
+    "postcss": "^5.2.16",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.3.3",
+    "postcss-modules": "^0.6.4",
+    "postcss-smart-import": "^0.6.10",
+    "precss": "^1.4.0",
+    "style-loader": "^0.16.1",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.2"
+  },
+  "dependencies": {
+    "@types/jquery": "^2.0.41",
+    "jQuery": "^1.7.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
+  }
+}
