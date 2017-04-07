@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "./Navbar/Navbar";
 import * as ReactDOM from "react-dom";
 import * as React from 'react';
 
