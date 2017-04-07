@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Tue Mar 28 2017 19:40:22 GMT+0530 (India Standard Time)
+// Generated on Fri Apr 07 2017 22:32:06 GMT+0530 (India Standard Time)
 var webpack_config=require("./webpack.config.js");
 
 module.exports = function(config) {
@@ -11,14 +11,13 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['mocha','chai'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      "test.js"
+      'test.js'
     ],
-
 
     // list of files to exclude
     exclude: [
@@ -32,11 +31,11 @@ module.exports = function(config) {
     },
 
     webpack:webpack_config,
-    
+
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['kjhtml'],
+    reporters: ['progress'],
 
 
     // web server port

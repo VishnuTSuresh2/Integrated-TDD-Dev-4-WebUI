@@ -1,11 +1,11 @@
 const webpack = require('webpack');
 const {resolve} = require('path');
-
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
-
-  entry: "./src/index.ts",
+  target: "web",
+  entry: "./src/index.tsx",
 
   output: {
     filename: "index.js",
@@ -13,7 +13,7 @@ module.exports = {
     library:"Index",
     libraryTarget:"umd"
   },
-
+  devServer: { inline: true },
   module: {
     loaders: [
       {
@@ -36,12 +36,16 @@ module.exports = {
               importLoaders: 1
             }
           },
-          'postcss-loader'
+          //'postcss-loader'
         ]
       }
     ]
   },
   resolve: {
     extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
-  }
+    alias: {
+        jquery: "jquery/src/jquery"
+    }
+  },
+  plugins: [new HtmlWebpackPlugin()]
 };
