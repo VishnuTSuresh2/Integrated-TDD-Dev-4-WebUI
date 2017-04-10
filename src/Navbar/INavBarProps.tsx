@@ -1,4 +1,3 @@
-interface INavBarProps {
-
+interface INavbarProps {
 }
-export default INavBarProps;
+export default INavbarProps;

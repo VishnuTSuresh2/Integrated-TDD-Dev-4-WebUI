@@ -13,7 +13,9 @@ module.exports = {
     library:"Index",
     libraryTarget:"umd"
   },
-  devServer: { inline: true },
+  devServer: {
+    inline: true
+  },
   module: {
     loaders: [
       {
@@ -24,10 +26,12 @@ module.exports = {
 
       {
         test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
         loader: 'awesome-typescript-loader'
       },
       {
         test: /\.(css|scss)$/,
+        exclude: /node_modules/,
         use: [
           'style-loader',
           {
@@ -36,7 +40,19 @@ module.exports = {
               importLoaders: 1
             }
           },
-          //'postcss-loader'
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /node_modules.*\.(css|scss)$$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          }
         ]
       }
     ]

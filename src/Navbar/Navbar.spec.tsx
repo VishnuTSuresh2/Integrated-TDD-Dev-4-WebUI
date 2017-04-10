@@ -11,6 +11,7 @@ export default function(domfixtures:DomFixtures){
     describe("Navbar",()=>{
         it("has classname viq-navbar",()=>{
             let fixture:HTMLElement=domfixtures.mount();
+            $(fixture).css("position","relative");
             ReactDOM.render(<Navbar />,fixture);
             expect($(fixture).find(".viq-navbar").length).to.equal(1);
         })
